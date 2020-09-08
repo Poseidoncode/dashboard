@@ -1,0 +1,40 @@
+
+body{
+    font-family:"微軟正黑體";
+    background-color:#e1dcd9;
+}
+
+.bg-color1{
+    background-color:#8f8681 ; 
+}
+
+.nav-height{
+    height:65px;
+}
+
+img.list-item{
+    width: 100%;
+    max-width: 443.75px;
+}
+
+p.list-item-card {
+    height: 48px;
+}
+
+img.item-view {
+    width: 100%;
+    max-width: 500px;
+}
+
+img.item-preview {
+    width: 80px;
+    height: 80px;
+}
+
+img.payment_type_icon{
+    width: 50px;
+}
+
+/* .form-control{
+    width: 30% !important;
+} */

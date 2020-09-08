@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    
+    <style>
+    .in{
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    }
+    </style>
+
+</head>
+<body>
+    
+<ul class="list" id="list">
+    <li class="in">1</li>
+    <li class="in">2</li>
+    <li class="in">3</li>
+    <li class="in">4</li>
+    <li class="in">5</li>
+    <li class="in">6</li>  
+    </ul>
+
+  
+  
+    <script>
+    
+    var oList = document.getElementById('list');
+    //新增一個li元素
+    var oAdd = document.createElement('li');
+    //設定新增元素的css樣式
+    oAdd.className = "in";
+    oAdd.style.cssText = 'background-color:red;border-radius:50%';
+    //新增到oList中
+    oList.insertBefore(oAdd,null);
+    var num = -1;
+    var max = oList.children.length;
+    function incrementNumber(){
+    num  ;
+    //oList.getElementsByTagName('li')[max]相當於null，所以不報錯
+    oList.insertBefore(oAdd,oList.getElementsByTagName('li')[num]); 
+    if(num == max){
+    num = -1;
+    } 
+    if(num == 0){
+    num = 1;
+    }
+    setTimeout(incrementNumber,1000);
+    }
+    setTimeout(incrementNumber,1000);
+
+    </script>   
+   
+</body>
+</html>
